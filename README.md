@@ -2,6 +2,8 @@
 
 PWA estática/offline para registrar entrenos de reinicio.
 
+App publicada: https://robertoalmela.github.io/entreno-roberto-tracker/
+
 ## Uso local
 
 ```bash
