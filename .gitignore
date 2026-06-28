@@ -1,0 +1,12 @@
+# OS/editor
+.DS_Store
+*.swp
+
+# local temp/logs
+*.log
+.tmp/
+tmp/
+
+# dependency/build residue if added later
+node_modules/
+dist/
