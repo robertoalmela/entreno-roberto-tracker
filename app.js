@@ -91,6 +91,8 @@ function removeSet(exIndex,setIndex){
 function finishWorkout(){
   if(!state.active) return;
   updateActiveFromDOM();
+  const hasData = state.active.exercises.some(ex => ex.sets.some(s => Number(s.reps) > 0));
+  if(!hasData && !confirm('No has apuntado ninguna serie. ¿Guardar la sesión vacía igualmente?')) return;
   const session = { ...state.active, end: new Date().toISOString() };
   state.sessions.unshift(session);
   state.active = null;
@@ -124,8 +126,9 @@ function render(){
   $('#clearData').onclick = clearData;
   ['calcWeight','calcReps','calcReserve'].forEach(id => $('#'+id).oninput = renderCalculator);
   renderActive(); renderStats(); renderCalculator(); startTimer();
-  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 }
+
+if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 
 function renderActive(){
   const panel = $('#workoutPanel');

@@ -2,12 +2,14 @@
 
 PWA estática/offline para registrar entrenos de reinicio.
 
+**Estado: v1.0** — terminada; solo mantenimiento según uso real.
+
 App publicada: https://robertoalmela.github.io/entreno-roberto-tracker/
 
 ## Uso local
 
 ```bash
-cd ~/Desktop/GitHub/entreno-roberto-tracker
+cd ~/Desktop/GitHub/00-active/entreno-roberto-tracker
 python3 -m http.server 8787
 ```
 
