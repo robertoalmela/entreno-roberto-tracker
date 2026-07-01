@@ -27,7 +27,7 @@ jobs:
       - name: Prepare static artifact
         run: |
           mkdir -p dist
-          cp index.html styles.css app.js manifest.webmanifest sw.js dist/
+          cp index.html styles.css app.js manifest.webmanifest sw.js icon-192.png icon-512.png apple-touch-icon.png dist/
           touch dist/.nojekyll
 
       - name: Configure Pages
